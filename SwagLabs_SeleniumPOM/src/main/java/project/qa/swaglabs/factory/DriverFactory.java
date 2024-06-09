@@ -2,6 +2,7 @@ package project.qa.swaglabs.factory;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -62,7 +63,7 @@ public class DriverFactory {
 	}
 	
 	public void login(String userLogin) {
-		WebDriverWait wait = new WebDriverWait(getDriver(),30);
+		WebDriverWait wait = new WebDriverWait(getDriver(),Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("email xpath")));
 		getDriver().findElement(By.xpath("email xpath")).sendKeys(userLogin);
 		getDriver().findElement(By.xpath("submit button xpath")).click();
