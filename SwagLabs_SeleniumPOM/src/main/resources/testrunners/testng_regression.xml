@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <!--<test thread-count="5" name="Test">
+  </test>--> <!-- Test -->
+  
+  <listeners>
+	<listener class-name="project.qa.amazon.listeners.ExtentReportListener"></listener>
+  </listeners>
+  
+  <test name="AmazonHomeTest">
+	<classes>
+		<class name="project.qa.amazon.tests.AmazonHomeTest"></class>
+	</classes>
+  </test>
+</suite> <!-- Suite -->
